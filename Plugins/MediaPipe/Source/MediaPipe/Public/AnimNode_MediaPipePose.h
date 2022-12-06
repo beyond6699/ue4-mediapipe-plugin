@@ -31,9 +31,13 @@ struct MEDIAPIPE_API  FAnimNode_MediaPipePose : public FAnimNode_MediaPipeBase
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MediaPipe | IK", meta = (PinShownByDefault))
 	//	bool bUseArmIK = true;
 
+
+	UPROPERTY(EditAnywhere, Category = "SkeletalControl")
+		FBoneReference BonesToModify;
+
 protected:
 	virtual void EvaluateComponentPose_AnyThread(FComponentSpacePoseContext& Output) override;
-	//virtual void EvaluateSkeletalControl_AnyThread(FComponentSpacePoseContext& Output, TArray<FBoneTransform>& OutBoneTransforms) override;
+	virtual void EvaluateSkeletalControl_AnyThread(FComponentSpacePoseContext& Output, TArray<FBoneTransform>& OutBoneTransforms) override;
 	virtual void Initialize_AnyThread(const FAnimationInitializeContext& Context) override;
 //private:
 //	TWeakPtr<IPoseSolver> PoseSolver;

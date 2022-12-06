@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "BoneControllers/AnimNode_SkeletalControlBase.h"
+
 #include "AnimNode_MediaPipeBase.generated.h"
 
 
@@ -31,4 +32,12 @@ protected:
 //private:
 //	UPROPERTY()
 //		TWeakObjectPtr<UMediaPipeSource> MediaPipeSource;
+//private:
+	UPROPERTY()
+	 TArray< TWeakObjectPtr< class UMediaPipeLandmarkObserverComponent>> MediaPipeObserverComponents;
+
+	UPROPERTY()
+	TWeakObjectPtr< class UMediaPipeLandmarkObserverComponent> PoseMediaPipeLandmarkObserverComponent;
+	
+
 };
