@@ -12,12 +12,20 @@
   "Category": "Media",
   "CanContainContent": true,
   "Installed": true,
-  "Modules": [
-    {
-      "Name": "MediaPipe",
-      "Type": "Runtime",
-      "LoadingPhase": "Default",
-      "WhitelistPlatforms": [ "Win64" ]
-    }
-  ]
+    "Modules": [
+        {
+            "Name": "MediaPipe",
+            "Type": "Runtime",
+            "LoadingPhase": "Default",
+            "WhitelistPlatforms": [ "Win64" ]
+        },
+        {
+            "Name": "MediaPipeEditor",
+            "Type": "UncookedOnly",
+            "LoadingPhase": "PreDefault",
+            "PlatformAllowList": [
+                "Win64"
+            ]
+        }
+    ]
 }

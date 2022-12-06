@@ -18,7 +18,10 @@ public class MediaPipe : ModuleRules
                 "Slate",
                 "SlateCore",
                 "RHI",
-                "RenderCore"
+                "RenderCore",
+                "AnimGraphRuntime",  
+                "AnimGraph",  
+                "BlueprintGraph"  
             }
         );
 

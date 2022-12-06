@@ -25,6 +25,10 @@
 		{
 			"Name": "Bridge",
 			"Enabled": false
+		},
+		{
+			"Name": "ControlRig",
+			"Enabled": true
 		}
 	]
 }
